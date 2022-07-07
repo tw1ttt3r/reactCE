@@ -2,7 +2,16 @@ import { Autocomplete, Button, Rating, TextField, ToggleButton, ToggleButtonGrou
 import mock_data from "./MOCK_DATA.json"
 import { Fragment, useState } from "react"
 
+import Table from "./components/table";
+import Tbody from "./components/tbody";
+import TCol from "./components/tcol";
+import Tfoot from "./components/tfoot";
+import Thead from "./components/thead";
+import Tr from "./components/tr";
+
 function App() {
+
+  const elementos = ["pedro", "ricardo", "gabriela", "antonio"]
 
   const [ history, setHistory ] = useState({})
   const [ status, setStatus ] = useState(false)
@@ -67,7 +76,7 @@ function App() {
         <Button onClick={handleClickButton} variant="outlined">Limpiar Historial</Button>
       </section>
       
-      {/* <Table>
+      <Table>
         <Thead>
           <Tr>
             <TCol>
@@ -89,7 +98,7 @@ function App() {
             </TCol>
           </Tr>
         </Tfoot>
-      </Table> */}
+      </Table>
     </div>
   );
 }
